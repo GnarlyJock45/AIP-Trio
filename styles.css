@@ -1,0 +1,34 @@
+/* Style for each box to display part of the garden image */
+.box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.2rem; /* Rounded corners */
+    border: 2px solid #ccc; /* Light border */
+    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Smooth hover & lighting transition */
+    cursor: pointer; /* Indicate interactivity */
+}
+
+.box:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+.box.lit {
+    box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.8); /* Glowing effect when lit */
+    border-color: #facc15; /* Golden border for lit boxes */
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    transition: background 0.3s ease;
+}
+
+.box.lit::before {
+    background: rgba(0, 0, 0, 0); /* Remove overlay when lit */
+}

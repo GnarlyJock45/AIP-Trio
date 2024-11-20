@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Game</title>
+
+    <!-- Using TailwindCSS for more efficient and quick styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Using vanilla css for boxes created by JS dynamically + to add a dark overlay on the squares -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<!-- Using gradient background colors to achieve a silver like background, putting a light color in the middle of the gradient -->
+<body class="bg-gradient-to-br from-slate-500 via-gray-400 to-slate-500 flex justify-center items-center min-h-screen">
+    
+    <!-- Game Container --- Styling the container for the game, using background opacity and blur to show some of the silver background -->
+    <div class="p-8 bg-white/50 flex flex-col justify-center rounded-sm shadow-xl backdrop-blur-md">
+
+        <!-- Boxes Container --- Using grid and splitting into 5 columns with small gaps. -->
+        <div id="garden" class="grid grid-cols-5 gap-2">
+            <!-- Boxes will be dynamically generated -->
+        </div>
+
+        <!-- Submit Button --- using 'slate' to fit the theme of the page. On hover, a similar gradient to the background will appear with a transition and small scale increase  -->
+        <button id="submit-button" class="mt-6 w-fit mx-auto px-8 py-3 text-white font-semibold text-lg rounded-sm shadow-lg bg-slate-500 hover:bg-gradient-to-br from-slate-500 via-gray-600 to-slate-500 duration-300 transition-all  hover:scale-105">
+            Check
+        </button>
+    </div>
+
+    <!-- Added my name for the rights :) -->
+    <h1 class="text-3xl text-zinc-100 font-bold absolute right-0 md:right-24 ">
+        Yazan Ghassan
+    </h1>
+    <script src="main.js"></script>
+</body>
+</html>
